@@ -1,0 +1,15 @@
+@import "libs/normalize.scss";
+@import "libs/fontawesome/all.min.scss";
+@import "libs/flex-grid/flex-grid.scss";
+@import "fonts.scss";
+@import "vars.scss";
+
+body {
+  font-family: $regular;
+}
+
+//MobileMenu component {
+@import "libs/components/MobileMenu/mobileMenu.scss";
+//MobileMenu component }
+
+@import "media.scss";
