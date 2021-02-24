@@ -15,5 +15,11 @@ build           | Prod folder (command: gulp build)
 
 ### Included css libraries:
 
-    normalize.css
-    flex-grid-lite.css
+    normalize
+    flex-grid
+    fontawesome5
+
+### Included components:
+    MobileMenu
+
+    ![](https://github.com/mhrustik/html_fast_template/app/src/scss/libs/components/MobileMenu/Screenshot_2.png)
