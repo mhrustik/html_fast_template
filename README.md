@@ -19,9 +19,9 @@ build           | Prod folder (command: gulp build)
     flex-grid
     fontawesome5
 
-### Included components:
+<!-- ### Included components:
     MobileMenu
 
 ![](https://github.com/mhrustik/html_fast_template/blob/master/app/src/scss/libs/components/MobileMenu/Screenshot_1.png)
 
-![](https://github.com/mhrustik/html_fast_template/blob/master/app/src/scss/libs/components/MobileMenu/Screenshot_2.png)
+![](https://github.com/mhrustik/html_fast_template/blob/master/app/src/scss/libs/components/MobileMenu/Screenshot_2.png) -->
