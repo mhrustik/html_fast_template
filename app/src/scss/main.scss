@@ -3,13 +3,53 @@
 @import "libs/flex-grid/flex-grid.scss";
 @import "fonts.scss";
 @import "vars.scss";
+//@import "libs/owlCarousel/owl.carousel.min.scss";
+//@import "libs/owlCarousel/owl.theme.default.min.scss";
 
 body {
   font-family: $regular;
 }
 
-//MobileMenu component {
-@import "libs/components/MobileMenu/mobileMenu.scss";
-//MobileMenu component }
+//Components {
+@keyframes accent {
+  0% {
+    left: 120%;
+    background-color: rgba(white, 0.1);
+    width: 5px;
+  }
+  80% {
+    left: 120%;
+    background-color: rgba(white, 0.2);
+    width: 20px;
+  }
+  100% {
+    left: -150%;
+    background-color: rgba(white, 0.1);
+    width: 5px;
+  }
+}
+
+.orange_link_btn_fill {
+  background: $red;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(245, 56, 56, 0.35);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  .blick {
+    height: 100px;
+    position: absolute;
+    animation: accent 4s ease-in-out infinite;
+    transform: rotateZ(20deg);
+    top: -10px;
+  }
+  span {
+    display: block;
+    color: white;
+    padding: 17px 77px;
+  }
+}
+
+//Components }
 
 @import "media.scss";

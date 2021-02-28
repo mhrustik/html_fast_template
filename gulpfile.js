@@ -16,6 +16,7 @@ const css_files = [
 
 const js_files = [
     "./app/src/js/jquery/dist/jquery.js",
+    "./app/src/js/owlCarousel/owl.carousel.min.js",
     "./app/src/js/index.js"
 ];
 
@@ -28,11 +29,7 @@ const fonts = [
 ];
 
 const images = [
-    "./app/images/*.jpg",
-    "./app/images/*.jpeg",
-    "./app/images/*.gif",
-    "./app/images/*.png",
-    "./app/images/*.svg"
+    "./app/images/**/*.{jpg,jpeg,png,gif,svg}"
 ];
 
 //Development mode
@@ -101,7 +98,7 @@ function imagemin() {
                 max: 80,
                 min: 70
             }),
-            imageminPngquant({ quality: '80' })
+            imageminPngquant({ quality: [0.65, 0.90] })
         ]))
         .pipe(gulp.dest("./build/images"))
         .pipe(browser_sync.stream());
