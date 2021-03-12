@@ -380,3 +380,8 @@ input,
 select {
   outline: none;
 }
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: $uiInputColor2;
+    background-clip: text;
+}
