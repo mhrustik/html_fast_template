@@ -11,7 +11,7 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const imageminPngquant = require('imagemin-pngquant');
 
 const css_files = [
-    "./app/src/scss/*.scss"
+    "./app/src/scss/**/*.scss"
 ];
 
 const js_files = [
@@ -64,7 +64,7 @@ function watch_dev() {
         }
     });
 
-    gulp.watch("./app/src/scss/*.scss", styles_dev);
+    gulp.watch("./app/src/scss/**/*.scss", styles_dev);
     gulp.watch("./app/src/js/**/*.js", scripts_dev);
     gulp.watch("./app/*.html").on('change', browser_sync.reload);
 }
@@ -98,7 +98,7 @@ function imagemin() {
                 max: 80,
                 min: 70
             }),
-            imageminPngquant({ quality: [0.65, 0.90] })
+            imageminPngquant({ quality: [0.8, 0.9] })
         ]))
         .pipe(gulp.dest("./build/images"))
         .pipe(browser_sync.stream());
