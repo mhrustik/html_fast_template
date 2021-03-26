@@ -6,9 +6,6 @@ const sass = require("gulp-sass");
 const gulp_uglify = require("gulp-uglify");
 const del = require("del");
 const browser_sync = require("browser-sync").create();
-const gulp_imagemin = require('gulp-imagemin');
-const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-const imageminPngquant = require('imagemin-pngquant');
 
 const css_files = [
     "./app/src/scss/**/*.scss"
@@ -83,26 +80,6 @@ function fonts_move() {
         .pipe(gulp.dest("./build/fonts"))
 }
 
-function imagemin() {
-    return gulp.src(images)
-        .pipe(gulp_imagemin([
-            gulp_imagemin.gifsicle({ interlaced: true, optimizationLevel: 5 }),
-            gulp_imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
-                ]
-            }),
-            imageminJpegRecompress({
-                progressive: true,
-                max: 80,
-                min: 70
-            }),
-            imageminPngquant({ quality: [0.8, 0.9] })
-        ]))
-        .pipe(gulp.dest("./build/images"))
-        .pipe(browser_sync.stream());
-}
 
 function styles() {
     return gulp.src(css_files)
