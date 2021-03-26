@@ -15,12 +15,9 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^6.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
-    "imagemin-jpeg-recompress": "^6.0.0",
-    "imagemin-pngquant": "^8.0.0",
     "node-sass": "^4.13.0"
   },
   "dependencies": {
